@@ -12,6 +12,8 @@ jobs:
       - run: mkdir -p my_workspace
       - run: pwd
       - run: ls
+      - run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+      - run: poetry --version
       - run: echo "Trying out workspaces" > my_workspace/echo-output
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory

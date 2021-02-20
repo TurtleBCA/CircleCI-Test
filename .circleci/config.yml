@@ -14,6 +14,7 @@ jobs:
       - run: ls
       - run: sudo pip3 install pip==18.0 poetry==0.12
       - run: poetry --version
+      - run: bash <(curl -s https://codecov.io/bash)
       - run: echo "Trying out workspaces" > my_workspace/echo-output
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory
